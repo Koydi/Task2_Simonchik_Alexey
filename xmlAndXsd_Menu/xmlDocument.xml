@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns="http://epam.by.menu_xsd">
+	<menu-section name="Горячие закуски">
+		<dish name="Ассорти рыбное">
+			<photo>Условное фото какое-то</photo>
+			<description>Слабосоленая форель, семга</description>
+			<weight>100 20 15</weight>
+			<price>100</price>
+		</dish>
+		<dish name="Ассорти баклажаны">
+			<photo>Ссылка</photo>
+			<description>Жареные баклажаны с помидорами</description>
+			<weight>100 5</weight>
+			<options>
+				<option>
+					<description>С помидорами</description>
+					<price>12</price>
+				</option>
+				<option>
+					<description>С чесноком</description>
+					<price>10</price>
+				</option>
+			</options>
+		</dish>
+	</menu-section>
+	<menu-section name="Завтраки">
+		<dish name="Лобио с шампиньонами">
+			<photo>Ссылка</photo>
+			<description></description>
+			<weight>150 5</weight>
+			<price>100</price>
+		</dish>
+		<dish name="Жульен">
+			<photo>Ссылка</photo>
+			<description></description>
+			<weight>12 1</weight>
+			<options>
+				<option>
+					<description>С курицей</description>
+					<price>145</price>
+				</option>
+				<option>
+					<description>С грибами</description>
+					<price>155</price>
+				</option>
+			</options>
+		</dish>
+	</menu-section>
+</menu>

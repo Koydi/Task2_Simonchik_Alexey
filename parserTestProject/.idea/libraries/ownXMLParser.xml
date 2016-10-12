@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ownXMLParser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/ownXMLParser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

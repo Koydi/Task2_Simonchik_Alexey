@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://epam.by.menu_xsd" xmlns="http://epam.by.menu_xsd" elementFormDefault="qualified">
+
+
+	<xsd:element name="menu">
+		<xsd:complexType>
+			<xsd:choice minOccurs="1" maxOccurs="unbounded">
+				<xsd:element name="menu-section" type="menu-section-type" />
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+
+
+	<xsd:complexType name="menu-section-type">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="dish" type="dish-type" />
+		</xsd:choice>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+
+
+	<xsd:complexType name="dish-type">
+		<xsd:sequence>
+			<xsd:element name="photo" type="xsd:string" />
+			<xsd:element name="description" type="xsd:string" />
+			<xsd:element name="weight" type="weight-simple-type" />
+			<xsd:choice>
+				<xsd:element name="price" type="price-simple-type" />
+				<xsd:element name="options" type="options-type" />
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+	</xsd:complexType>
+
+
+	<xsd:complexType name="options-type">
+		<xsd:choice minOccurs="1" maxOccurs="unbounded">
+			<xsd:element name="option" type="option-type" />
+		</xsd:choice>
+	</xsd:complexType>
+
+	<xsd:complexType name="option-type">
+		<xsd:sequence>
+			<xsd:element name="description" type="xsd:string" />
+			<xsd:element name="price" type="price-simple-type" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:simpleType name="price-simple-type">
+		<xsd:restriction>
+			<xsd:minInclusive value="0" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="integer">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="0" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="weight-simple-type">
+		<xsd:list itemType="integer"/>
+	</xsd:simpleType>
+
+</xsd:schema>
